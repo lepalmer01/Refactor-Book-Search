@@ -11,16 +11,6 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
-        test: () => {
-          return "Hello"
-        },
-        mult: (parent, { x, y }) => {
-          return x * y
-        },
-        users: async () => {
-          const users = await User.find({})
-          return users
-        }
     },
 
     Mutation: {

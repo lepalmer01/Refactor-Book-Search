@@ -32,9 +32,6 @@ const typedefs = `#graphql
 
   type Query {
     me: User
-    test: String
-    mult(x: Int!, y: Int!): Int
-    users: [User]
   }
 
   type Mutation {

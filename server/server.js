@@ -7,7 +7,7 @@ const { authMiddleware } = require('./utils/auth');
 const {typedefs, resolvers} = require('./schemas')
 
 // Error.stackTraceLimit = 30
-const PORT = process.env.PORT || 3505;
+const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs: typedefs,
   resolvers,

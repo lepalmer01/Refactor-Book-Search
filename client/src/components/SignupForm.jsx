@@ -36,8 +36,8 @@ const SignupForm = () => {
       addUser({
         variables: {
           ...userFormData,
-        },
-      });
+        }
+      })
 
       if (error) {
         throw new Error("something went wrong!");
@@ -56,6 +56,10 @@ const SignupForm = () => {
       password: "",
     });
   };
+
+  if (error) {
+    console.error(error.message)
+  }
 
   return (
     <>
