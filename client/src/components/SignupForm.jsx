@@ -31,15 +31,17 @@ const SignupForm = () => {
       event.preventDefault();
       event.stopPropagation();
     }
+    console.log("submitting form signup", userFormData)
 
     try {
       addUser({
         variables: {
           ...userFormData,
-        }
-      })
+        },
+      });
 
       if (error) {
+        console.log(error)
         throw new Error("something went wrong!");
       } else {
         console.log(data);
@@ -58,7 +60,7 @@ const SignupForm = () => {
   };
 
   if (error) {
-    console.error(error.message)
+    console.error(error.message);
   }
 
   return (
